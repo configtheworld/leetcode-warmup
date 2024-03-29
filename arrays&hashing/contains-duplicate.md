@@ -50,3 +50,22 @@ function containsDuplicate(nums: number[]): boolean {
   return false;
 }
 ```
+
+- In PHP its with one function which tells the occurencies array_count_values
+
+```php
+class Solution {
+
+    /**
+     * @param Integer[] $nums
+     * @return Boolean
+     */
+    function containsDuplicate($nums) {
+        $countValues = array_count_values($nums);
+        foreach ($countValues as $quantity){
+            if($quantity>=2)return true;
+        }
+        return false;
+    }
+}
+```
